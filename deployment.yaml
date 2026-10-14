@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: placement-portal
-          image: YOUR_DOCKERHUB_USERNAME/college-placement-portal:1
+          image: dhan01/noticeboard:latest
           ports:
             - containerPort: 80
