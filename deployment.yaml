@@ -1,0 +1,20 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: placement-portal
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: placement-portal
+  template:
+    metadata:
+      labels:
+        app: placement-portal
+    spec:
+      containers:
+        - name: placement-portal
+          image: YOUR_DOCKERHUB_USERNAME/college-placement-portal:1
+          ports:
+            - containerPort: 80
