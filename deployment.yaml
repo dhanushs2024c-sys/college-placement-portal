@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,5 +15,6 @@ spec:
       containers:
         - name: placement-portal
           image: dhan01/noticeboard:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
